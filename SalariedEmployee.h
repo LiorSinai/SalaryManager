@@ -15,8 +15,6 @@ public:
    void setWeeklySalary(double); // set weekly salary
    double getWeeklySalary() const; // return weekly salary
 
-   double salary() const; // return weekly salary
-
    // keyword virtual signals intent to override               
    virtual double earnings() const override; // calculate earnings        
    virtual std::string toString() const override; // string representation

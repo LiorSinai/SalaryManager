@@ -33,9 +33,6 @@ double BasePlusCommissionEmployee::getBaseSalary() const {
 double BasePlusCommissionEmployee::earnings() const {
    return getBaseSalary() + CommissionEmployee::earnings();
 }
-double BasePlusCommissionEmployee::salary() const {
-	return getBaseSalary() + CommissionEmployee::earnings();
-}
 
 // return a string representation of a BasePlusCommissionEmployee
 string BasePlusCommissionEmployee::toString() const {

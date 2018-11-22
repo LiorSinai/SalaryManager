@@ -20,7 +20,7 @@ int main() {
 
 	std::vector<SalariedEmployee*> salariedEmployees;
 	std::vector<CommissionEmployee*> commissionEmployees;
-	std::vector<BasePlusCommissionEmployee*> basePlusCommissionEmployees;
+	//std::vector<BasePlusCommissionEmployee*> basePlusCommissionEmployees; //Lior: not needed afer adding sales function
 	int type; // a variable to swtich case for each type
 	char inputString[255]; // declare character array large enough to hold 255 characters
 	std::string firstName; 
@@ -43,22 +43,26 @@ int main() {
 	while (addMore)
 	{	
 		std::cin >> type;
-		std::cin.ignore(255, '\n');  // discard rest of the input stream
+		
+		// check if the input was read properly
+		if ((type < 1) || (type > 4))
+		{
+			std::cin.clear();
+			std::cin.ignore(255, '\n');  // discard rest of the input stream
+			std::cout << "Input not recognised. Please input 1,2,3 or 4." << '\n';
+			continue; //skip to the start again to get a valid input
+		}
 
 		if (type == 4) 
 		{
 			addMore = false;
 			break;
 		}
-		if ((type != 1) && (type != 2) && (type != 3))
-		{
-			std::cout << "Input not recognised. Please input 1,2,3 or 4."<<'\n';
-			continue; //skip to the start again to get a valid input
-		}
+		
 		
 		std::cout << "Please enter their first and last name:" << "\t";
 		std::cin.getline(inputString, 255, ' '); // deliminator is a space, so assumes the first word is the first name
-		// for later: check for first space in a character array
+		// XXX for later: add functionality for only entering a first name: exit after enter and check for first space in the character array
 		firstName = inputString;// convert char array to string
 		std::cin.getline(inputString, 255, '\n'); // and the rest is the last name, and discard everything after '\n'
 		lastName = inputString; // convert char array to string
@@ -105,7 +109,7 @@ int main() {
 				std::cin >> sales;
 				std::cin.ignore(255, '\n');
 
-				basePlusCommissionEmployees.push_back(new BasePlusCommissionEmployee{ firstName, lastName, socialSecurityNumber, sales,rate,salary });
+				commissionEmployees.push_back(new BasePlusCommissionEmployee{ firstName, lastName, socialSecurityNumber, sales,rate,salary });
 				break;
 		}
 		//prompt for next loop (does not include options)
@@ -120,10 +124,6 @@ int main() {
 	for (const Employee* employeePtr : commissionEmployees) {
 		std::cout << employeePtr->toString() << "\n\n";
 	}
-	for (const Employee* employeePtr : basePlusCommissionEmployees) {
-		std::cout << employeePtr->toString() << "\n\n";
-	}
-
 
 	// Get total salaries
 	std::cout << "Please enter how many weeks you would like to pay salaries for: ";
@@ -132,19 +132,16 @@ int main() {
 	std::cin.ignore(255, '\n');
 	double totalSalaries = 0.0;
 	for (const SalariedEmployee* employeePtr : salariedEmployees) {
-		totalSalaries += employeePtr->salary();
+		totalSalaries += employeePtr->getWeeklySalary();
 	}
-	for (const BasePlusCommissionEmployee* employeePtr : basePlusCommissionEmployees) {
-		totalSalaries += employeePtr->salary();
+	for (const CommissionEmployee* employeePtr : commissionEmployees) {
+		totalSalaries += employeePtr->earnings();
 	}
 	std::cout << "total salaries for " << weeks << " weeks: " << weeks * totalSalaries << '\n';
 
 	// Get total sales
 	double totalSales = 0.0;
 	for (const CommissionEmployee* employeePtr : commissionEmployees) {
-		totalSales += employeePtr->getGrossSales();
-	}
-	for (const CommissionEmployee* employeePtr : basePlusCommissionEmployees) {
 		totalSales += employeePtr->getGrossSales();
 	}
 	std::cout << "total sales: " << totalSales << '\n';

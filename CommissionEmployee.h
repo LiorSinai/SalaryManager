@@ -9,7 +9,7 @@
 class CommissionEmployee : public Employee {
 public:
 	CommissionEmployee(const std::string&, const std::string&,
-		const std::string&, double = 0.0, double = 0.0); //added integer for weeks
+		const std::string&, double = 0.0, double = 0.0);
    virtual ~CommissionEmployee() = default; // virtual destructor
 
    void setCommissionRate(double); // set commission rate
@@ -20,8 +20,6 @@ public:
 
    // keyword virtual signals intent to override                 
    virtual double earnings() const override; // calculate earnings   
-   virtual double salary() const override; // pure virtual // Lior: added salary function
-   // salary is different to earnings??? how???
    virtual std::string toString() const override; // string representation
 private:
    double grossSales; // gross weekly sales       

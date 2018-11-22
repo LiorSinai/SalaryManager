@@ -25,9 +25,6 @@ void SalariedEmployee::setWeeklySalary(double salary) {
 // return salary
 double SalariedEmployee::getWeeklySalary() const { return weeklySalary; }
 
-// Lior: added return salary
-double SalariedEmployee::salary() const { return weeklySalary; }
-
 // calculate earnings; 
 // override pure virtual function earnings in Employee
 double SalariedEmployee::earnings() const { return getWeeklySalary(); }

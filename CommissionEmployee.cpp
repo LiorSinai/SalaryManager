@@ -45,11 +45,6 @@ double CommissionEmployee::earnings() const {
    return getCommissionRate() * getGrossSales();
 }
 
-// calculate salary; override pure virtual function salary in Employee
-double CommissionEmployee::salary() const {
-	return getCommissionRate() * getGrossSales();
-}
-
 // return a string representation of CommissionEmployee's information 
 string CommissionEmployee::toString() const {
    ostringstream output;
