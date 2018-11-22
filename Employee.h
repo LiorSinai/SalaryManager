@@ -20,7 +20,10 @@ public:
    std::string getSocialSecurityNumber() const; // return SSN
 
    // pure virtual function makes Employee an abstract base class
-   virtual double earnings() const = 0; // pure virtual          
+   virtual double earnings() const = 0; // pure virtual  
+   virtual double salary() const = 0; // pure virtual // Lior: added salary function
+   // From Canvas: "earnings" is something different from "salary"
+   // So assumptions is "earnings" is total earnings and salary is weekly earnings
    virtual std::string toString() const; // virtual              
 private:
    std::string firstName;

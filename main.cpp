@@ -71,23 +71,23 @@ int main() {
 		socialSecurityNumber = inputString; // convert char array to string
 		// Check
 		//std::cout << "Social secruity number: " << socialSecurityNumber << '\n';
-		SalariedEmployee dummyPerson =  SalariedEmployee{ firstName, lastName, socialSecurityNumber, 0 };
+		//SalariedEmployee dummyPerson =  SalariedEmployee{ firstName, lastName, socialSecurityNumber, 0 };
 		switch (type)
 		{
 			case 1:
 				std::cout << "Please enter a salary: ";
 				std::cin >> salary;
 				std::cin.ignore(255, '\n');
-				dummyPerson = SalariedEmployee{ firstName, lastName, socialSecurityNumber, salary };
-				std::cout << dummyPerson.toString() << '\n';
-				salariedEmployees.push_back(&dummyPerson);
+				//dummyPerson = SalariedEmployee{ firstName, lastName, socialSecurityNumber, salary };
+				//std::cout << dummyPerson.toString() << '\n';
+				//salariedEmployees.push_back(&dummyPerson);
 				salariedEmployees.push_back(new SalariedEmployee{ firstName, lastName, socialSecurityNumber, salary });
 				break;
 			case 2:
 				std::cout << "Please enter the commission rate (0<rate<1): ";
 				std::cin >> rate;
 				std::cin.ignore(255, '\n');
-				std::cout << "Please enter the gross sales for this employeee: ";
+				std::cout << "Please enter the gross weekly sales for this employeee: ";
 				std::cin >> sales;
 				std::cin.ignore(255, '\n');
 
@@ -101,7 +101,7 @@ int main() {
 				std::cout << "Please enter the commission rate (0<rate<1): ";
 				std::cin >> rate;
 				std::cin.ignore(255, '\n');
-				std::cout << "Please enter the gross sales for this employeee: ";
+				std::cout << "Please enter the gross weekly sales for this employeee: ";
 				std::cin >> sales;
 				std::cin.ignore(255, '\n');
 
@@ -132,10 +132,10 @@ int main() {
 	std::cin.ignore(255, '\n');
 	double totalSalaries = 0.0;
 	for (const SalariedEmployee* employeePtr : salariedEmployees) {
-		totalSalaries += employeePtr->getWeeklySalary();
+		totalSalaries += employeePtr->salary();
 	}
 	for (const BasePlusCommissionEmployee* employeePtr : basePlusCommissionEmployees) {
-		totalSalaries += employeePtr->getBaseSalary();
+		totalSalaries += employeePtr->salary();
 	}
 	std::cout << "total salaries for " << weeks << " weeks: " << weeks * totalSalaries << '\n';
 

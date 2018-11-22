@@ -17,6 +17,7 @@ public:
 
    // keyword virtual signals intent to override                 
    virtual double earnings() const override; // calculate earnings
+   virtual double salary() const override; // pure virtual // Lior: added salary function
    virtual std::string toString() const override; // string representation           
 private:
    double baseSalary; // base salary per week
