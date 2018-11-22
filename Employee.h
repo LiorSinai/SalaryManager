@@ -20,7 +20,7 @@ public:
    std::string getSocialSecurityNumber() const; // return SSN
 
    // pure virtual function makes Employee an abstract base class
-   virtual double earnings() const = 0; // pure virtual          
+   virtual double earnings() const = 0; // pure virtual  
    virtual std::string toString() const; // virtual              
 private:
    std::string firstName;

@@ -151,8 +151,6 @@
     <ClInclude Include="CommissionEmployee.h" />
     <ClInclude Include="Employee.h" />
     <ClInclude Include="SalariedEmployee.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BasePlusCommissionEmployee.cpp" />
