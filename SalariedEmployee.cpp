@@ -6,8 +6,6 @@
 #include "SalariedEmployee.h" // SalariedEmployee class definition
 using namespace std;
 
-//Made a change here
-
 // constructor 
 SalariedEmployee::SalariedEmployee(const string& first,
    const string& last, const string& ssn, double salary)
