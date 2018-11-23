@@ -1,0 +1,68 @@
+\hypertarget{class_commission_employee}{}\section{Commission\+Employee Class Reference}
+\label{class_commission_employee}\index{Commission\+Employee@{Commission\+Employee}}
+
+
+{\ttfamily \#include $<$Commission\+Employee.\+h$>$}
+
+Inheritance diagram for Commission\+Employee\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_commission_employee}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_commission_employee_a46ccb62795b2c82b2ce5d9ca109d21af}\label{class_commission_employee_a46ccb62795b2c82b2ce5d9ca109d21af}} 
+{\bfseries Commission\+Employee} (const std\+::string \&, const std\+::string \&, const std\+::string \&, double=0.\+0, double=0.\+0)
+\item 
+\mbox{\Hypertarget{class_commission_employee_a85d35440afb6065ed90982165bd8a45e}\label{class_commission_employee_a85d35440afb6065ed90982165bd8a45e}} 
+virtual \mbox{\hyperlink{class_commission_employee_a85d35440afb6065ed90982165bd8a45e}{$\sim$\+Commission\+Employee}} ()=default
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_commission_employee_a9604cfc3151934d2c5616f6961e0abe6}\label{class_commission_employee_a9604cfc3151934d2c5616f6961e0abe6}} 
+void \mbox{\hyperlink{class_commission_employee_a9604cfc3151934d2c5616f6961e0abe6}{set\+Commission\+Rate}} (double)
+\begin{DoxyCompactList}\small\item\em set commission rate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_commission_employee_a494b60111ebada810df48421fe57f875}\label{class_commission_employee_a494b60111ebada810df48421fe57f875}} 
+double \mbox{\hyperlink{class_commission_employee_a494b60111ebada810df48421fe57f875}{get\+Commission\+Rate}} () const
+\begin{DoxyCompactList}\small\item\em return commission rate \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_commission_employee_a28a54096a9fd1468c39dc03a7f14e543}\label{class_commission_employee_a28a54096a9fd1468c39dc03a7f14e543}} 
+void \mbox{\hyperlink{class_commission_employee_a28a54096a9fd1468c39dc03a7f14e543}{set\+Gross\+Sales}} (double)
+\begin{DoxyCompactList}\small\item\em set gross sales amount \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_commission_employee_acafd14323207ade77db368b050be9376}\label{class_commission_employee_acafd14323207ade77db368b050be9376}} 
+double \mbox{\hyperlink{class_commission_employee_acafd14323207ade77db368b050be9376}{get\+Gross\+Sales}} () const
+\begin{DoxyCompactList}\small\item\em return gross sales amount \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_commission_employee_aa7759d5908bd7357a9976c2c2740e9bb}{earnings}} () const override
+\begin{DoxyCompactList}\small\item\em keyword virtual signals intent to override \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_commission_employee_a9b0a2adfd93e4df96236b1e1758596f9}\label{class_commission_employee_a9b0a2adfd93e4df96236b1e1758596f9}} 
+virtual std\+::string \mbox{\hyperlink{class_commission_employee_a9b0a2adfd93e4df96236b1e1758596f9}{to\+String}} () const override
+\begin{DoxyCompactList}\small\item\em string representation \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fig. 12.\+13\+: \mbox{\hyperlink{_commission_employee_8h_source}{Commission\+Employee.\+h}} \mbox{\hyperlink{class_commission_employee}{Commission\+Employee}} class derived from \mbox{\hyperlink{class_employee}{Employee}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_commission_employee_aa7759d5908bd7357a9976c2c2740e9bb}\label{class_commission_employee_aa7759d5908bd7357a9976c2c2740e9bb}} 
+\index{Commission\+Employee@{Commission\+Employee}!earnings@{earnings}}
+\index{earnings@{earnings}!Commission\+Employee@{Commission\+Employee}}
+\subsubsection{\texorpdfstring{earnings()}{earnings()}}
+{\footnotesize\ttfamily double Commission\+Employee\+::earnings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+keyword virtual signals intent to override 
+
+calculate earnings 
+
+Implements \mbox{\hyperlink{class_employee_a821a8bea1db657efc004670c8481cbae}{Employee}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_base_plus_commission_employee_a79cefc4722f05de0e545c2f911e2dcab}{Base\+Plus\+Commission\+Employee}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Commission\+Employee.\+h\item 
+Commission\+Employee.\+cpp\end{DoxyCompactItemize}

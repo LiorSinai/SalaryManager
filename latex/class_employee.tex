@@ -1,0 +1,70 @@
+\hypertarget{class_employee}{}\section{Employee Class Reference}
+\label{class_employee}\index{Employee@{Employee}}
+
+
+{\ttfamily \#include $<$Employee.\+h$>$}
+
+Inheritance diagram for Employee\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_employee}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_employee_aea37f8ab922dd5c4e4e033506efe4ad8}\label{class_employee_aea37f8ab922dd5c4e4e033506efe4ad8}} 
+{\bfseries Employee} (const std\+::string \&, const std\+::string \&, const std\+::string \&)
+\item 
+\mbox{\Hypertarget{class_employee_a01aa009d0ef6b36afdc4aea4da1123a1}\label{class_employee_a01aa009d0ef6b36afdc4aea4da1123a1}} 
+virtual \mbox{\hyperlink{class_employee_a01aa009d0ef6b36afdc4aea4da1123a1}{$\sim$\+Employee}} ()=default
+\begin{DoxyCompactList}\small\item\em compiler generates virtual destructor \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_employee_a15e4ef686f54493b5afe52497000675e}\label{class_employee_a15e4ef686f54493b5afe52497000675e}} 
+void \mbox{\hyperlink{class_employee_a15e4ef686f54493b5afe52497000675e}{set\+First\+Name}} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em set first name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_employee_aef7422ec385231d030f1bf3f53d8563b}\label{class_employee_aef7422ec385231d030f1bf3f53d8563b}} 
+std\+::string \mbox{\hyperlink{class_employee_aef7422ec385231d030f1bf3f53d8563b}{get\+First\+Name}} () const
+\begin{DoxyCompactList}\small\item\em return first name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_employee_a784d4bd99607405393f46e8648008a42}\label{class_employee_a784d4bd99607405393f46e8648008a42}} 
+void \mbox{\hyperlink{class_employee_a784d4bd99607405393f46e8648008a42}{set\+Last\+Name}} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em set last name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_employee_a9a9e3d0c77c609e5016589926844b003}\label{class_employee_a9a9e3d0c77c609e5016589926844b003}} 
+std\+::string \mbox{\hyperlink{class_employee_a9a9e3d0c77c609e5016589926844b003}{get\+Last\+Name}} () const
+\begin{DoxyCompactList}\small\item\em return last name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_employee_a981082b8cf7727af8fbff6291dd03bee}\label{class_employee_a981082b8cf7727af8fbff6291dd03bee}} 
+void \mbox{\hyperlink{class_employee_a981082b8cf7727af8fbff6291dd03bee}{set\+Social\+Security\+Number}} (const std\+::string \&)
+\begin{DoxyCompactList}\small\item\em set S\+SN \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_employee_afe97463fcee4f5cbc6eb55914887789f}\label{class_employee_afe97463fcee4f5cbc6eb55914887789f}} 
+std\+::string \mbox{\hyperlink{class_employee_afe97463fcee4f5cbc6eb55914887789f}{get\+Social\+Security\+Number}} () const
+\begin{DoxyCompactList}\small\item\em return S\+SN \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{class_employee_a821a8bea1db657efc004670c8481cbae}{earnings}} () const =0
+\begin{DoxyCompactList}\small\item\em pure virtual function makes \mbox{\hyperlink{class_employee}{Employee}} an abstract base class \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_employee_aff7d34f5d6587ba947313b3bbce3e52d}\label{class_employee_aff7d34f5d6587ba947313b3bbce3e52d}} 
+virtual std\+::string \mbox{\hyperlink{class_employee_aff7d34f5d6587ba947313b3bbce3e52d}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em virtual \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fig. 12.\+9\+: \mbox{\hyperlink{_employee_8h_source}{Employee.\+h}} \mbox{\hyperlink{class_employee}{Employee}} abstract base class. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_employee_a821a8bea1db657efc004670c8481cbae}\label{class_employee_a821a8bea1db657efc004670c8481cbae}} 
+\index{Employee@{Employee}!earnings@{earnings}}
+\index{earnings@{earnings}!Employee@{Employee}}
+\subsubsection{\texorpdfstring{earnings()}{earnings()}}
+{\footnotesize\ttfamily virtual double Employee\+::earnings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+pure virtual function makes \mbox{\hyperlink{class_employee}{Employee}} an abstract base class 
+
+pure virtual 
+
+Implemented in \mbox{\hyperlink{class_commission_employee_aa7759d5908bd7357a9976c2c2740e9bb}{Commission\+Employee}}, \mbox{\hyperlink{class_salaried_employee_a917d254c8869beb7a3c1f1d0787b1515}{Salaried\+Employee}}, and \mbox{\hyperlink{class_base_plus_commission_employee_a79cefc4722f05de0e545c2f911e2dcab}{Base\+Plus\+Commission\+Employee}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Employee.\+h\item 
+Employee.\+cpp\end{DoxyCompactItemize}
