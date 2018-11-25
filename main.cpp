@@ -29,7 +29,7 @@ int main() {
 	double sales;
 	double rate;
 	long long buffer = std::numeric_limits<std::streamsize>::max(); // for cin.ignore() commands below
-	std::cout << buffer << '\n';
+	//std::cout << buffer << '\n';
 
 	std::cout << "What type of employee would you like to add (input the number only):\n" <<
 		"1: salaried employee\n" <<
@@ -61,11 +61,14 @@ int main() {
 		}
 
 		std::cout << "Please enter their first and last name:" << "\t";
-		std::cin.getline(inputString, 255, ' '); // deliminator is a space, so assumes the first word is the first name
-		// XXX for later: add functionality for only entering a first name: exit after enter and check for first space in the character array
-		firstName = inputString;// convert char array to string
+		std::cin >> firstName; //reads until the first white space
+		//firstName = inputString;// convert char array to string
 		std::cin.getline(inputString, 255, '\n'); // and the rest is the last name, and discard everything after '\n'
 		lastName = inputString; // convert char array to string
+		if (lastName[0] == ' ')
+		{
+			lastName.erase(0, 1); // remove that space character that wasn't read at cin >> firstName;
+		}
 
 		std::cout << "Please enter the social security number (format: xxx-xx-xxxx):" << "\t";
 		std::cin.getline(inputString, 12, '\n');
